@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --clr-bg: hsl(222, 100%, 97%);
+    --clr-card-bg: hsl(223, 100%, 99%);
+    --clr-accent: hsl(338, 100%, 72%);
+    --clr-main: hsl(230, 64%, 19%);
+    --clr-bg-shadow: hsl(222, 94%, 94%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: hsl(222, 100%, 97%);
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.feedback-card {
+    max-width: 30rem;
+    padding: 1rem;
+    /* border-radius: 1rem; */
+    background-color: hsl(223, 100%, 99%);
+    /* box-shadow: -3.5rem -3.5rem 1px var(--clr-bg-shadow); */
+}
+
+.feedback-card__text {
+    margin-bottom: 1rem;
+}
+
+.feedback-card__mood {
+    display: flex;
+    gap: 1rem;
+}
+
+.mood--terrible,
+.mood--bad,
+.mood--okay,
+.mood--good,
+.mood--amazing {
+    display: flex;
+}
+
+.mood--terrible > p,
+.mood--bad > p,
+.mood--okay > p,
+.mood--good > p,
+.mood--amazing > p {
+    display: none;
+}
+
+.mood--icon {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.mood--icon:hover {
+    color: var(--clr-accent);
+}
+
+button.selected {
+    color: var(--clr-accent);
+    scale: 1.5;
+    transition: scale .3s;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    border-color: var(--clr-bg-shadow);
+}
