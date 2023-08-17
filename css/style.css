@@ -4,6 +4,7 @@
     --clr-bg: hsl(222, 100%, 97%);
     --clr-card-bg: hsl(223, 100%, 99%);
     --clr-accent: hsl(338, 100%, 72%);
+    --clr-dark-accent: hsl(338, 100%, 32%);
     --clr-main: hsl(230, 64%, 19%);
     --clr-bg-shadow: hsl(222, 94%, 94%);
 }
@@ -24,15 +25,27 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 100%;
     line-height: 1.5;
     background-color: hsl(222, 100%, 97%);
+    text-wrap: balance;
+    text-align: center;
+}
+
+a {
+    font-weight: 500;
 }
 
 h1 {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: clamp(1.5rem, -1.1667rem + 13.3333vw, 3rem);
     font-weight: 700;
+}
+
+p,
+label {
+    font-size: clamp(0.75rem, 0.3056rem + 2.2222vw, 1rem);
 }
 
 .feedback-card {
@@ -49,6 +62,7 @@ h1 {
 
 .feedback-card__mood {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -75,11 +89,11 @@ h1 {
 }
 
 .mood--icon:hover {
-    color: var(--clr-accent);
+    color: var(--clr-dark-accent);
 }
 
 button.selected {
-    color: var(--clr-accent);
+    color: var(--clr-dark-accent);
     scale: 1.5;
     transition: scale .3s;
 }
